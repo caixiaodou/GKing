@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="F:\正式开始写书\第七章\Code\View.xslt"?>
+<Book xmlns="http://blog.csdn.net/hongbo0521" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://blog.csdn.net/hongbo0521
+F:\正式开始写书\第七章\Code\Exsample.xsd"  name="ASP.NET Ajax开发应用">
+	<专业技术类书籍></专业技术类书籍>
+	<Writer Email="hongbo0521@sina.com" Name="洪石丹" Age="24" QQNumber="17726406">
+		<Skills>
+			<Skill SkillName="ASP.NET" SkillLevel="熟悉"></Skill>
+			<Skill SkillName="C#" SkillLevel="熟悉"></Skill>
+			<Skill SkillName="JavaScript" SkillLevel="熟悉"></Skill>
+			<Skill SkillName="VB.NET" SkillLevel="熟悉"></Skill>
+			<Skill SkillName="Ajax" SkillLevel="熟悉"></Skill>
+		</Skills>
+	</Writer>
+	<Reader Email="xxxx@xxx.com" Name="学生" Age="22" QQNumber="1000000" Sex="男"></Reader>
+	<Reader Email="xxxx@xxx.com" Name="开发者" Age="22" QQNumber="1000000" Sex="男"></Reader>
+	<Reader Email="xxxx@xxx.com" Name="更多的人" Age="22" QQNumber="1000000" Sex="男"></Reader>
+</Book>

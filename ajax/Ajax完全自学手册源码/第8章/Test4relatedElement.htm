@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+function hanleMouseEvent(event)
+{
+	var div=document.getElementById("demoMouseEvent");
+	div.innerHTML="<b>当前鼠标事件名称："+event.type+"</b><Br>";
+	div.innerHTML+="事件源："+(event.srcElement || event.target).id+"<br>";
+	div.innerHTML+="鼠标坐标X:"+event.clientX+"&nbsp&nbsp&nbsp鼠标坐标Y："+event.clientY+"<br>";
+	
+	div.innerHTML+="鼠标事件中relatedTarget 的ID:"+event.relatedTarget.id+"<br>";	
+}
+		</script>
+	</head>
+	<body>
+		<div
+		 onmouseover="hanleMouseEvent(event)"
+		onmouseout="hanleMouseEvent(event)" 
+		 style="background-color:#ACE356;height:20px;width:400px;" id="mouseDiv">鼠标事件响应实例</div>
+		 <div  style="background-color:#F65327;height:20px;width:400px;"  id="demoMouseEvent"></div>
+	</body>
+</html>

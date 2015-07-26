@@ -1,0 +1,60 @@
+﻿body {/*页面总体样式*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 150%;
+}
+ a {/*超链接样式*/
+	color: #0000CC;
+	text-decoration: underline;
+}
+
+.STYLE1 {color: #FF3300}
+
+#divAdvertiseContent p {/*广告窗体内容中的p元素*/
+	white-space: nowrap;
+	margin: 0px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	overflow: hidden;
+	width:170px;
+	text-overflow:ellipsis;
+}
+
+#divAdvertise {/*广告窗体*/
+	background-color: whiteSmoke;
+	font-size: 12px;
+	line-height: 150%;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid Red;
+	display: none;
+}
+ #divAdvertiseTitle {/*广告窗体头部标题*/
+	float: left;
+	font-weight: bold;
+	color: #0066FF;
+}
+ #divAdvertiseClose {/*广告窗体关闭按钮*/
+	float: right;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF0000;
+}
+ #divAdvertiseBar {/*广告窗体头部样式*/
+	background-color:menu;
+	padding-top: 4px;
+	padding-right: 5px;
+	padding-left: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 22px;
+}
+ #divAdvertiseContent {/*广告窗体内容*/
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+ #divAdvertiseContent a {/*广告窗体内容中的a元素*/
+	color: #0066FF;
+	text-decoration: underline;
+}

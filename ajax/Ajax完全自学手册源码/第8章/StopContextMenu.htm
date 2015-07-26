@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>禁用右键菜单的页面</title>
+		<script type=text/javascript language=JavaScript>
+if(document.all && document.uniqueID)
+{
+	document.onmousedown=function()
+	{
+		var event=window.event;
+		if(event.button==2)
+		{
+			alert("禁止右键菜单");
+		}
+	}
+}
+else
+{
+	document.body.oncontextmenu=function(event)
+	{
+		var event=arguments[0];
+		event.preventDefault();
+	}
+}
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

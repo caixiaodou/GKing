@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+			var xmlHttp;
+			//´´½¨XMLHttpRequest¶ÔÏó
+			function createXmlHttpRequest()
+			{
+				if(window.ActieveXObject)//ÅÐ¶Ïä¯ÀÀÆ÷ÊÇ·ñÊÇIE²¢ÇÒÖ§³ÖXMLHttpRequest¶ÔÏó
+				{
+					xmlHttp=new ActieveXObject("Microsoft.XMLHTTP");
+				}
+				else if(window.XMLHttpRequest)//ÅÐ¶Ïä¯ÀÀÆ÷ÊÇ·ñÖ§³ÖXMLHttpRequest¶ÔÏó
+				{
+					xmlHttp=new XMLHttpRequest();
+				}
+			}
+			
+			function startRequest()
+			{
+				createXmlHttpRequest();
+				xmlHttp.onreadystatechange=readyStateChangeHandle;//ÊµÏÖ¶ÁÈ¡·þÎñÆ÷×´Ì¬º¯ÊýÎ¯ÍÐ
+				xmlHttp.open("POST","Hello World.xml",true);//Éè¶¨ÈçºÎÇëÇó·þÎñÆ÷
+				xmlHttp.send(null);//Ïò·þÎñÆ÷·¢ËÍÇëÇó	
+			}
+			
+			function readyStateChangeHandle()
+			{	//ÅÐ¶Ï¶ÁÈ¡·þÎñÆ÷×´Ì¬
+				if(xmlHttp.readyState==4)
+				{	//ÅÐ¶Ï·þÎñÆ÷×´Ì¬Âë
+					if(xmlHttp.status==200)
+					{	//µÃµ½Ò³ÃæÖÐµÄDiv
+						var div=document.getElementById("divHelloWorld");
+						//½ÓÊÕ·þÎñÆ÷ÏìÓ¦µÄXMLÎÄµµ
+						var xmlDoc=xmlHttp.responseXML;
+						//½âÎö·þÎñÆ÷ÏìÓ¦µÄXMLÎÄµµ
+						var data=xmlDoc.getElementsByTagName("data")[0].firstChild.nodeValue;
+						div.innerHTML="<b>"+data+"</b>";//½«·þÎñÆ÷Êý¾ÝÌî³äÖÁDivÖÐ
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div align=center id="divHelloWorld" style="width:100%"></div>
+		<dir align=center style="width:100%">
+			<input type=button value="Hello World" id="btnRequest" onclick="startRequest()">
+		</dir>
+	</body>
+</html>

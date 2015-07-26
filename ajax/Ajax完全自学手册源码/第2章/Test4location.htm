@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+			function redirct()
+			{
+				window.location.href="http://www.163.com";//当前页面跳转至163
+				//window.location.assign("http://www.163.com");//当前页面跳转至163
+				window.location.replace("http://www.163.com");//不能后退至本页
+			}
+			
+			window.location.reload();
+			window.location.reload(false);//这两种调用是等价的，都是从缓存中重新载入当前页面
+			
+			window.setTimeout(redirct,1000);	
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

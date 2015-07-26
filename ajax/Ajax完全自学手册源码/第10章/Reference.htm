@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>反向引用</title>
+		<script  type=text/javascript language=JavaScript>
+var  str="#12321312";
+var reg=/#(\d+)/;
+reg.test(str);
+alert(RegExp.$1);
+
+var str="aocaoc";
+var reg=/(aoc)\1/;
+alert(str.match(reg));
+
+var str="520 1314";
+var reg=/(\d{3}) (\d{4})/;
+var newStr=str.replace(reg,"$2 $1");
+alert(newStr);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+<!--
+
+
+
+-->

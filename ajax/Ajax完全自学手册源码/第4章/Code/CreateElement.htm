@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>创建节点</title>
+		<script type=text/javascript language=JavaScript>
+			function createText()
+			{
+				var div=document.createElement("div");//创建一个新的Div
+				var text1=document.createTextNode("Hello World");//创建文本节点
+				div.appendChild(text1);//将文本节点追加至Div节点的子节点中
+				document.body.appendChild(div);//将Div节点追加至body的子节点中
+			}
+			
+			function removeText()
+			{
+				var div=document.body.getElementsByTagName("div")[0];
+				document.body.removeChild(div);
+			}
+			
+			function replaceText()
+			{
+				var newDiv=document.createElement("div");//创建新的Div
+				var newText=document.createTextNode("Hello Ajax");//创建新文本节点
+				newDiv.appendChild(newText);//将文本节点追加至Div节点的子节点中
+				var oldDiv=document.body.getElementsByTagName("div")[0];//得到旧Div
+				document.body.insertBefore(newDiv,oldDiv);//将新节点追加在旧节点的父节点的子节点集合末尾
+			}
+			
+			function createElements()
+			{
+				var textArr=["星期一","星期二","星期三","星期四","星期五","星期六","星期天 "];
+				var fragMent=document.createDocumentFragment();
+				
+				for(var i=0;i<textArr.length;i++)
+				{
+					var newDiv=document.createElement("div");//创建新的Div
+					var newText=document.createTextNode(textArr[i]);//创建新文本节点
+					newDiv.appendChild(newText);//将文本节点追加至Div节点的子节点中
+					fragMent.appendChild(newDiv);
+				}
+				
+				document.body.appendChild(fragMent);
+			}
+		</script>
+	</head>
+	<body>
+		<input type=button id='btnCreate' onclick="createText()" value="创建节点" >
+		<input type=button id='btnDelete' onclick="removeText()" value="删除节点" >
+		<input type=button id='btnReplace' onclick="replaceText()" value="替换节点" >
+		<input type=button id='btnReplace' onclick="createElements()" value="大量添加节点" >
+	</body>
+</html>
+
+				

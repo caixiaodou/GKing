@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>错误类型验证</title>
+		<script type=text/javascript language=JavaScript>
+try
+{
+	eval("a++b");
+}
+catch(exception)
+{
+	if(exception instanceof SyntaxError)
+	{
+		alert("eval函数执行引起的错误：  "+exception.message);
+	}
+	else
+	{
+		alert("其他错误：  "+exception.message);
+	}
+}
+
+
+
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

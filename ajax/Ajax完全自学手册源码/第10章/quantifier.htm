@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>量词实例</title>
+		<script type=text/javascript language=JavaScript>
+var str="abbbaabbbaaabbb";
+var arr=new Array();
+var reg1=/.*bbb/gi;
+var reg2=/.*?bbb/gi;
+
+arr=str.match(reg1);
+for(var i=0;i<arr.length;i++)
+{
+	alert("reg1:"+arr[i]);
+}
+
+arr=str.match(reg2);
+for(var i=0;i<arr.length;i++)
+{
+	alert("reg2:"+arr[i]);
+}
+
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+<!--
+var reg2=/.*?bbb/gi;
+arr=str.match(reg2);
+for(var i=0;i<arr.length;i++)
+{
+	alert(arr[i]);
+}
+
+arr=str.match(reg2);
+for(var i=0;i<arr.length;i++)
+{
+	alert(arr[i]);
+}
+arr=str.match(reg3);
+for(var i=0;i<arr.length;i++)
+{
+	alert(arr[i]);
+}
+
+var reg3=/.*+bbb/gi;
+arr=str.match(reg3);
+for(var i=0;i<arr.length;i++)
+{
+	alert(arr[i]);
+}
+var reg2=/.*?bbb/gi;
+var reg3=/.*+bbb/gi;
+alert(2);
+
+var str=str.match(reg2);
+alert(str);
+var str=str.match(reg3);
+alert(str);
+-->

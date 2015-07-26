@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>继承实例</title>
+		<script type=text/javascript language=JavaScript>
+function Auto(engine,oil,driveLevel)
+{
+	this.Engine=engine;<!--汽车基类的引擎型号-->
+	this.Oil=oil;<!--汽车使用的油料信息-->
+	this.DriveLevel=driveLevel;<!--汽车的驾驶等级要求-->
+}
+Auto.prototype.Drive=function()<!--汽车的驾驶方式  基类方法未有任何实现-->
+{
+	
+}
+
+function Car(engine,oil,driveLevel,carType,series,brand)
+{
+	Auto.call(this,engine,oil,driveLevel);
+	
+	this.CarType=carType;<!--轿车类型-->
+	this.Series=series;<!--轿车系别-->
+	this.Brand=brand;<!--轿车品牌-->
+}
+
+Car.prototype=new Auto();
+Car.prototype.Drive=function()<!--覆盖基类方法-->
+{
+	alert("驾驶乐趣无穷");
+}
+
+Car.prototype.Compete=function()<!--子类扩展的新方法-->
+{
+	alert("参与比赛、永争第一");
+}
+
+var car=new Car("1.8T","97#","B2","家用车","欧系车","大众");
+
+car.Drive();
+car.Compete();
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

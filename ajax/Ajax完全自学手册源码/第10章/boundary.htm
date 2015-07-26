@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>±ß½ç</title>
+		<script type=text/javascript language=JavaScript>
+var reg=/(\w+)\.$/;
+var str="This is the last word.";
+reg.test(str);
+alert(RegExp.$1);
+
+var reg=/^(\w+)/;
+var str="This is the last word.";
+reg.test(str);
+alert(RegExp.$1);
+
+var reg=/^(.+?)\b/;
+var str="This is the last word.";
+reg.test(str);
+alert(RegExp.$1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>分组</title>
+		<script type=text/javascript language=JavaScript>
+var reg=/aocaoc/gi;
+var reg=/(aoc){2}/gi;
+var reg=/(aoc)*/gi;
+var reg=/(aoc)?/gi;
+var reg=/(aoc)+/gi;
+
+var reg=/([tg]ad?)*/gi;
+
+var reg=/(my (or me)?)/gi;
+
+var reg2TrimSpace=/^\s*(.*?)\s+$/;
+
+
+String.prototype.trim=function()
+{
+	var reg2TrimSpace=/^\s*(.*?)\s+$/;
+	return this.replace(reg2TrimSpace,"$1");
+}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

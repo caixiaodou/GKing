@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Firefox中的XML DOM</title>
+		<script type=text/javascript language=JavaScript>
+function createFirefoxXMLDOM(nameSpace,rootElement)
+{
+	var xmlDom=document.implementation.createDocument(nameSpace,rootElement,null);
+	return xmlDom;
+}
+
+
+/*
+<!--
+
+var xmlDom=createFirefoxXMLDOM("","",null);<!--新建空白文档-->
+
+xmlDom.async=false;<!--设定XMLDOM对象载入XML文档方式为同步方式-->
+
+xmlDom.onload=function() <!--首先设定onload事
+件处理函数-->
+{
+	alert("文档载入完毕");
+}
+xmlDom.load("TestData.xml");<!--设定载入XML文档路径，载入XML文档-->
+
+-->
+*/
+
+var domParser=new DOMParser();<!--实例化DOMParser对象-->
+var xmlDom=domParser.parseFromString("<coder />","text/xml");<!--强制转换字符串成为XML文档，并设定类型转换后的XML文档的内容类型为text/xml-->
+
+if(xmlDom.documentElement.tagName != "parsererror")
+{
+	//文档装载没有错误	
+}
+else
+{
+	//文档装载发生错误
+}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,231 @@
+<?xml version="1.0" standalone="yes"?>
+<PopStars>
+  <PopStar>
+    <ID>0</ID>
+    <PopStarName>刘德华</PopStarName>
+    <Stars>1</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>0</ID>
+    <PopStarName>刘德华</PopStarName>
+    <Stars>2</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>0</ID>
+    <PopStarName>刘德华</PopStarName>
+    <Stars>3</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>0</ID>
+    <PopStarName>刘德华</PopStarName>
+    <Stars>4</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>0</ID>
+    <PopStarName>刘德华</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>1</ID>
+    <PopStarName>黎明</PopStarName>
+    <Stars>1</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>1</ID>
+    <PopStarName>黎明</PopStarName>
+    <Stars>2</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>1</ID>
+    <PopStarName>黎明</PopStarName>
+    <Stars>3</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>1</ID>
+    <PopStarName>黎明</PopStarName>
+    <Stars>4</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>1</ID>
+    <PopStarName>黎明</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>2</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>1</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>2</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>2</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>2</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>3</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>2</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>4</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>2</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>3</ID>
+    <PopStarName>郭富城</PopStarName>
+    <Stars>3</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>4</ID>
+    <PopStarName>张国荣</PopStarName>
+    <Stars>1</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>4</ID>
+    <PopStarName>张国荣</PopStarName>
+    <Stars>2</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>4</ID>
+    <PopStarName>张国荣</PopStarName>
+    <Stars>3</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>4</ID>
+    <PopStarName>张国荣</PopStarName>
+    <Stars>4</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>4</ID>
+    <PopStarName>张国荣</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>4</ID>
+    <PopStarName>张国荣</PopStarName>
+    <Stars>3</Stars>
+    <Time>2008-02-06 15:15:00</Time>
+  </PopStar>
+  <PopStar>
+    <ID>5</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>1</Stars>
+    <Time>2008-2-7 17:07:14</Time>
+  </PopStar>
+  <PopStar>
+    <ID>5</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>2</Stars>
+    <Time>2008-2-7 17:07:14</Time>
+  </PopStar>
+  <PopStar>
+    <ID>5</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>3</Stars>
+    <Time>2008-2-7 17:07:14</Time>
+  </PopStar>
+  <PopStar>
+    <ID>5</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>4</Stars>
+    <Time>2008-2-7 17:07:14</Time>
+  </PopStar>
+  <PopStar>
+    <ID>5</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-2-7 17:07:14</Time>
+  </PopStar>
+  <PopStar>
+    <ID>5</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-2-7 17:07:14</Time>
+  </PopStar>
+  <PopStar>
+    <ID>28</ID>
+    <PopStarName>刘德华</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-2-7 17:10:58</Time>
+  </PopStar>
+  <PopStar>
+    <ID>29</ID>
+    <PopStarName>黎明</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-2-7 17:12:04</Time>
+  </PopStar>
+  <PopStar>
+    <ID>30</ID>
+    <PopStarName>郭富城</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-2-7 17:12:58</Time>
+  </PopStar>
+  <PopStar>
+    <ID>31</ID>
+    <PopStarName>黎明</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-2-7 17:14:27</Time>
+  </PopStar>
+  <PopStar>
+    <ID>32</ID>
+    <PopStarName>黎明</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-2-7 17:15:16</Time>
+  </PopStar>
+  <PopStar>
+    <ID>33</ID>
+    <PopStarName>郭富城</PopStarName>
+    <Stars>5</Stars>
+    <Time>2008-2-7 17:23:03</Time>
+  </PopStar>
+  <PopStar>
+    <ID>34</ID>
+    <PopStarName>刘德华</PopStarName>
+    <Stars>4</Stars>
+    <Time>2008-2-7 17:28:55</Time>
+  </PopStar>
+  <PopStar>
+    <ID>35</ID>
+    <PopStarName>黎明</PopStarName>
+    <Stars>4</Stars>
+    <Time>2008-2-7 17:29:02</Time>
+  </PopStar>
+  <PopStar>
+    <ID>36</ID>
+    <PopStarName>张学友</PopStarName>
+    <Stars>4</Stars>
+    <Time>2008-2-7 17:29:04</Time>
+  </PopStar>
+  <PopStar>
+    <ID>37</ID>
+    <PopStarName>张国荣</PopStarName>
+    <Stars>4</Stars>
+    <Time>2008-2-7 17:29:07</Time>
+  </PopStar>
+</PopStars>

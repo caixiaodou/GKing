@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>IE中的XSLT支持</title>
+		<script type=text/javascript language=JavaScript>
+
+function createXmlDom()
+{
+	var xmlVersions=new Array(
+			"MSXML2.DOMDocument.5.0",
+			"MSXML2.DOMDocument.4.0",
+			"MSXML2.DOMDocument.3.0",
+			"MSXML2.DOMDocument",
+			"Microsoft.XmlDom"
+			);
+		
+	for(var i=0;i<xmlVersions.length;i++)
+	{
+		try
+		{
+			var xmlDom=new ActiveXObject(xmlVersions[i]);
+			return xmlDom;
+		}
+		catch(error)
+		{
+			continue;
+		}
+	}
+	
+	throw new Error("客户端浏览器版本过低，不支持XML DOM，请下载XML DOM");
+}
+
+
+function createFreeThreadedDOMDocument()
+{
+	return new ActiveXObject("MSXML2.FreeThreadedDOMDocument");
+}
+
+
+function createXSLTemplate()
+{
+	return new ActiveXObject("MSXML2.XSLTemplate");
+}
+
+
+function OutPutXML2HTMLByXSLT(xmlUrl,xsltUrl)
+{
+	var xmlDom=createXmlDom();
+	xmlDom.load(xmlUrl);
+	
+	var xsltDom=createFreeThreadedDOMDocument();
+	xsltDom.async=false;
+	xsltDom.load(xsltUrl);
+	
+	var xslTemplate=createXSLTemplate();
+	xslTemplate.stylesheet=xsltDom;
+	var processor=xslTemplate.createProcessor();
+	processor.input=xmlDom;
+	processor.transform();
+	document.write(processor.output);
+}
+
+OutPutXML2HTMLByXSLT("Writer.xml","View.xslt");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

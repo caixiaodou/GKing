@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+function Student(id,name,skill)
+{
+	this.Id=id;
+	this.Name=name;
+	this.Skill=skill;
+	this.Likes=new Array("编码","游戏");
+	
+	if(typeof(Student._initialized)=="undefined")
+	{
+		Student.prototype.ShowSkill=function()
+		{
+			alert(this.Skill);
+		}
+		Student._initialized=true;
+	}
+}
+
+var stu1=new Student(1,"hongbo","Ajax");
+var stu2=new Student(2,"Reader","JavaScript");
+
+stu2.Likes.push("旅行");
+
+stu1.ShowSkill();
+stu2.ShowSkill();
+alert(stu1.Likes);
+alert(stu2.Likes);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

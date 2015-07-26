@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+			var intervalID;//定义接收数字暂停ID的变量
+			
+			function testInterval()
+			{
+				//接收window.setInterval返回的数字暂停ID
+				intervalID=window.setInterval("alert(\"今天学习时间间隔\")",1000);
+			}
+			
+			//根据数字暂停ID终止window.setInterval所执行的代码
+			window.clearInterval(intervalID);
+		</script>
+	</head>
+	<body onload="testInterval();">
+		
+	</body>
+</html>

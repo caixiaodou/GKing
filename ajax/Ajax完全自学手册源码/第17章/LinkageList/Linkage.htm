@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="ProgId" content="VisualStudio.HTML">
+		<meta name="Originator" content="Microsoft Visual Studio .NET 7.1">
+		<script type="text/javascript" language="JScript">
+		var xmlHttp;
+		
+		function  createXmlHttp()
+		{
+			if(window.ActiveXObject)
+			{
+				xmlHttp=new ActiveXObject('Microsoft.XMLHTTP');
+			}
+			else if(window.XMLHttpRequest)
+			{
+				xmlHttp=new XMLHttpRequest();
+			}
+		}
+		
+		function startRequest(provinceID)
+		{
+			createXmlHttp();
+			xmlHttp.onreadystatechange=readyStateHandler(provinceID);
+			xmlHttp.open("GET",document.URL+createQueryString(provinceID),true);
+			xmlHttp.send(null);
+		}
+		
+		function readyStateHandler(provinceID)
+		{
+			if(xmlHttp.readyState=4)
+			{
+				if(xmlHttp.status=200)
+				{
+					changeCity(provinceID);
+				}
+			}
+		}
+		
+		function changeCity(provinceID)
+		{
+			
+		}
+		
+		function createQueryString(provinceID)
+		{
+			var queryString="provinceID="+provinceID;
+			return queryString;
+		}
+		</script>
+	</head>
+	<body>
+		<FONT face="ËÎÌו"></FONT>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>RegExp对象的实例化</title>
+		<script type=text/javascript language=JavaScript>
+var reg=new RegExp("JavaScript");
+var reg=new RegExp("JavaScript","g");
+var reg=new RegExp("JavaScript","gi");
+var reg=/JavaScript/gi;
+var str="JavaSCript  JavaScript";
+alert(reg.test(str));
+
+var reg=new RegExp("一个");
+var str="一个人 一个工具";
+var arr=reg.exec(str);
+alert(arr);
+
+var str="javaScript JAVASCRIPT  JavaScript";
+var reg=/JavaScript/gi;
+var  arr=str.match(reg);
+for(var i=0;i<arr.length;i++)
+{
+	alert(arr[i]);
+}
+
+var str="JavaScript Study";
+var reg=/JavaScript/;
+var index=str.search(reg);
+alert(index);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

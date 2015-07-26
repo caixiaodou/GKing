@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+<script type=text/javascript language=JavaScript>
+function modifyClass()
+{
+	var hr=document.getElementById("hr1");
+	hr.className="hr1";
+}
+</script>
+		<style type=text/css>
+			.hr
+			{
+				background-color:#00ff00;
+				height:10px;
+			}
+			
+			.hr1
+			{
+				background-color:#ff0000;
+				height:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<hr id="hr1" class="hr"></hr>
+		<p><input id="btnModifyClass" type=button onclick="modifyClass()" value="更改HR的属性" ></p>
+	</body>
+</html>

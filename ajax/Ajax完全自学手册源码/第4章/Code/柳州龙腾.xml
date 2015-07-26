@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312"?>
+<?xml-stylesheet type="text/xsl" href="view.xsl"?>
+<Ajax应用:class xmlns:Ajax应用="http://www.accp.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.accp.com
+accp.xsd" Ajax应用:no="103T14">
+	<Ajax应用:脱产/>
+	<Ajax应用:teacher Ajax应用:name="洪石丹" Ajax应用:handphone="13977454654">
+		<Ajax应用:skills>
+			<Ajax应用:skill Ajax应用:name=".NET WinForm" Ajax应用:level="精通"/>
+			<Ajax应用:skill Ajax应用:name="ASP.NET" Ajax应用:level="4"/>
+			<Ajax应用:skill Ajax应用:name="Microsoft Sql Server" Ajax应用:level="熟悉"/>
+			<Ajax应用:skill Ajax应用:name="XML" Ajax应用:level="3"/>
+		</Ajax应用:skills>
+	</Ajax应用:teacher>
+	<Ajax应用:student Ajax应用:no="NO111" Ajax应用:name="XXX" Ajax应用:sex="女"/>
+	<Ajax应用:student Ajax应用:no="NO222" Ajax应用:name="YY"/>
+	<Ajax应用:student Ajax应用:no="NO333" Ajax应用:name="ZZ" Ajax应用:age="26" Ajax应用:sex="女"/>
+	<Ajax应用:student Ajax应用:no="NO444" Ajax应用:name="AA" Ajax应用:age="22" Ajax应用:sex="男"/>
+	<Ajax应用:student Ajax应用:no="NO555" Ajax应用:name="BB" Ajax应用:handphone="13345678901"/>
+</Ajax应用:class>

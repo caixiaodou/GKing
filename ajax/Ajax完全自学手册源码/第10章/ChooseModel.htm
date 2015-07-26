@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ñ¡ÔñÄ£Ê½</title> 
+		<script type=text/javascript language=JavaScript>
+var reg=/(red|Blue)/;
+var str1="red";
+var str2="Blue";
+alert(reg.test(str1));
+alert(RegExp.$1);
+alert(reg.test(str2));
+alert(RegExp.$1);
+
+
+var badStr="badStr and AnothorBadStr";
+var reg=/(badStr|AnothorBadStr)/gi;
+var str=badStr.replace(reg,"*********");
+alert(str);
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

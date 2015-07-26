@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>简单Ajax示例</title>
+    <script type="text/javascript" language=javascript>
+        /**
+         * @author 洪石丹
+         */
+
+        var xmlHttp;
+
+        function createXmlHttpRequest()
+        {
+	        //判断是否为IE浏览器
+	        if(window.ActiveXObject)
+	        {
+		        xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	        else if(window.XMLHttpRequest)
+	        {
+		        xmlHttp=new XMLHttpRequest();
+	        }
+        }
+
+        //启动对页面的请求
+        function startRequest()
+        {
+	        createXmlHttpRequest();
+        	
+	        //当请求状态发生改变会调用该javaScript方法
+	        xmlHttp.onreadystatechange=handleStateChange;
+        	
+        	
+	        //建立对服务器的调用，此方法有3个参数，
+	        //第一个参数说明你请求服务器的方式，第二个参数确定你请求的服务器端的URL，第三个参数说明处理方式是否为异步处理
+	        //这里的异步提交是真正体现了Ajax优势的方式，当设定为False时，主要应用于持久化页面的设定。
+	       //这里设定请求服务器地址 
+	        xmlHttp.open('GET',"TestData.xml",true);
+        	
+	        //即向服务器发送请求，向服务器端发送某些数据可以是流、Document对象,字符串等对象，如果设定为异步提交，此方法一定会立即返回
+	        //但同步提交时该方法一定需要服务器相应
+	        //传入这个方法的内容会作为请求体的一部分发送
+	        xmlHttp.send(null);	
+        }
+
+        function handleStateChange()
+        {
+	        // 判断XMLHttpRequest对象读取服务器响应状态 4 说明对服务器响应读取完成 
+	        if(xmlHttp.readyState==4)
+	        {
+		        //判断Http状态码 200 说明服务器地址正确、请求正确
+		        if(xmlHttp.status==200)
+		        {
+		            //接收服务器回应的XmlDocument对象
+			        var xmlDoc=xmlHttp.responseXml;
+			       //通过控件ID找到控件testData
+			        var testData=document.getElementById('testData');
+			       //解析服务器回应的XmlDocument对象 并设定testData的值为服务器回应XML数据
+			        testData.innerHTML="<b>"+xmlDoc.getElementsByTagName('data')[0].firstChild.nodeValue+"</b>";
+		        }
+	        }
+        }
+    </script>
+</head>
+<body>
+    <input type=button id='btnAjax' value='触发Ajax事件'  onclick='startRequest();'/>
+    <div id='testData' ></div>
+</body>
+</html>

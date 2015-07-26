@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+function Person()
+{}
+Person.prototype.Name="reader";
+Person.prototype.Age=24;
+Person.prototype.Intro=function()
+{
+	alert("你好，我是"+this.Name);
+}
+
+function Coder()
+{}
+Coder.prototype=new Person();<!--设定Coder原型为Person-->
+Coder.prototype.Name="hongbo";
+Coder.prototype.Age="24";
+Coder.prototype.Code=function()
+{
+	alert("我在努力写代码");
+}
+
+
+var person=new Person();<!--定义父类对象-->
+var coder=new Coder();<!--定义程序员类对象-->
+
+person.Intro();<!--父类对象调用自身方法-->
+coder.Intro();<!--子类对象调用父类方法-->
+coder.Code();<!--子类对象调用自身方法-->
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

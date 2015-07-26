@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>混合方式实现的继承</title>
+		<script type=text/javascript language=JavaScript>
+function Person(name,age)<!--定义人类基类-->
+{
+	this.Name=name;
+	this.Age=age;
+	
+}
+
+Person.prototype.Intro=function()
+{
+	alert(this.Name);
+}
+
+
+function Coder(name,age,pay)<!--定义程序员基类-->
+{
+	Person.call(this,name,age);
+	this.Pay=pay;
+	
+}
+
+Coder.prototype=new Person();
+Coder.prototype.Code=function()
+	{
+		alert("我在努力写代码");
+	}
+	
+Coder.prototype.ShowPay=function()
+{
+	alert(this.Pay);
+}
+
+var person=new Person("reader",20);<!--定义父类对象-->
+var coder=new Coder("Hongbo",24,2500);<!--定义程序员类对象-->
+
+person.Intro();<!--父类对象调用自身方法-->
+coder.Intro();<!--子类对象调用父类方法-->
+
+coder.Code();<!--子类对象调用自身方法-->
+
+coder.ShowPay();<!--子类调用另一父类方法-->
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

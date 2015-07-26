@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Firefox中的XML DOM</title>
+		<script type=text/javascript language=JavaScript>
+function createFirefoxXMLDOM(nameSpace,rootElement)
+{
+	var xmlDom=document.implementation.createDocument(nameSpace,rootElement,null);
+	return xmlDom;
+}
+
+var xmlDom=createFirefoxXMLDOM("http://blog.csdn.net/hongbo0521/","Book",null);<!--新建空白文档-->
+xmlDom.async=false;//<!--设定XMLDOM对象载入XML文档方式为同步方式-->
+
+xmlDom.onload=function()// <!--首先设定onload事件处理函数-->
+{
+	alert("文档载入完毕");
+}
+xmlDom.load("Writer.xml");//<!--设定载入XML文档路径，载入XML文档-->
+var evaluator=new XPathEvaluator();
+var result=evaluator.evaluate("/*/*/*/*",
+			xmlDom.documentElement,null,XPathResult.ANY_TYPE,null);
+
+if(result!=null)
+{
+	switch(result)
+	{
+		case XPathResult.STRING_TYPE:
+			alert("string类型");
+			break;
+		case XPathResult.NUMBER_TYPE:
+			alert("number类型");
+			break;
+		case XPathResult.BOOLEAN_TYPE:
+			alert("Boolean类型");
+			break;
+		case XPathResult.UNORERED_NODE_ITERATOR_TYPE:
+			alert("UNORERED_NODE_ITERATOR_TYP类型");
+			break;
+		default:
+			alert("未知类型");
+			break;
+	}
+}
+
+
+
+var evaluator=new XPathEvaluator();
+var stringNode=evaluator.evaluate("/*/*/*/*",
+			xmlDom.documentElement,null,XPathResult.STRING_TYPE,null);
+alert(stringNode.stringValue);
+
+xmlDom.load("Writer.xml");//<!--设定载入XML文档路径，载入XML文档-->
+var evaluator=new XPathEvaluator();
+var nodeNum=evaluator.evaluate("count(/*/*/*/*)",
+			xmlDom.documentElement,null,XPathResult.NUMBER_TYPE,null);
+alert(nodeNum.numberValue);
+
+
+var evaluator=new XPathEvaluator();
+var nodeExists=evaluator.evaluate("/*/*/*/*",xmlDom.documentElement,null,XPathResult.BOOLEAN,null);
+if(nodeExists)
+{
+	alert("存在匹配当前XPath表达式的节点");
+}
+else
+{
+	alert("不存在任何匹配当前XPath表达式的节点");
+}
+
+
+
+var evaluator=new XPathEvaluator();
+var nodeList=evaluator.evaluate("/*/*/*/*",xmlDom.documentElement,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null);
+if(nodeList!=null)
+{
+	alert(nodeList.singleNodeValue.tagName);
+}
+
+var nodeList=evaluator.evaluate("/*/*/*/*",xmlDom.documentElement,null,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null);
+if(nodeList!=null)
+{
+	for(var i=0;i<nodeList.snapshotLength;i++)
+	{
+		alert(nodeList.snapshotItem(i).tagName);
+	}
+}
+
+
+var nodeList=evaluator.evaluate("/*/*/*/*",xmlDom.documentElement,null,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null);
+if(nodeList!=null)
+{
+	for(var i=0;i<nodeList.snapshotLength;i++)
+	{
+		alert(nodeList.snapshotItem(i).tagName);
+	}
+}
+
+if(nodeList!=null)
+{
+	var node=nodeList.iterateNext();
+	while(node)
+	{
+		alert(node.tagName);
+		node=nodeList.iterateNext();
+	}
+	
+}
+
+/*Element.prototype.selectNodes=function(xpathExperssion)
+{
+	var evaluator=new XPathEvaluator();
+	var nodeList=evaluator.evaluate(xpathExperssion,this,null,XPathResult.ORDER_NODE_ITERATOR_TYPE,null);
+	
+	var nodeArray=new Array();
+	if(nodeList!=null)
+	{
+		var node=nodeList.iterateNext();
+		while(node)
+		{
+			nodeArray.push(node);
+			node=nodeList.iterateNext();
+		}
+	}
+	
+	return nodeArray();
+}
+Element.prototype.selectNodes=function(xpathExperssion)
+{
+	var evaluator=new XPathEvaluator();
+	var nodeList=evaluator.evaluate(xpathExperssion,this,null,
+					XPathResult.ORDER_NODE_ITERATOR_TYPE,null);
+	
+	return nodeList();
+
+
+*/
+
+Element.prototype.selectSingleNode=function(xpathExperssion)
+{
+	var evaluator=new XPathEvaluator();
+	var nodeList=evaluator.evaluate(xpathExperssion,this,
+					null,XPathResult.FIRST_ORDERED_NODE_TYPE,null);
+	if(nodeList!=null)
+	{
+		return  nodeList.singleNodeValue.tagName;
+	}
+	else 
+	{
+		return null;
+	}
+}
+
+alert(xmlDom.documentElement.selectSingleNode("/*/*/*/*")+"&&&&&selectSingleNode");
+
+
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

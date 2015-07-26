@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>跨平台事件处理</title>
+		<script type=text/javascript language=JavaScript>
+var complexEvent=new Object();
+var isIE=(document.all && document.uniqueID) ? true : false; 
+complexEvent.addEventhandler=function(element,eventType,eventHandler)
+{
+	if(element.attachEvent)//判断是否是IE浏览器
+	{
+		element.attachEvent("on"+eventType,eventHandler);
+	}
+	else if(element.addEventListener)//判断浏览器是否支持DOM标准  即Firefox
+	{
+		element.addEventListener(eventType,eventHandler,false);
+	}
+}
+
+complexEvent.removeEventHandler=function(element,eventType,eventHandler)
+{
+	if(element.attachEvent)//判断是否是IE浏览器
+	{
+		element.detachEvent("on"+eventType,eventHandler);
+	}
+	else if(element.addEventListener)//判断浏览器是否支持DOM标准  即Firefox
+	{
+		element.removeEventListener(eventType,eventHandler,false);
+	}
+}
+
+complexEvent.formatEvent=function(eventObj)
+{
+	if(isIE)
+	{
+		eventObj.charCode=(eventObj.type=="keyPress") ? eventObj.keyCode : 0;
+		eventObj.eventPhase=2;
+		eventObj.isChar=(eventObj.type=="keyPress") ? true : false;
+		eventObj.pageX=eventObj.clientX+document.body.scrollLeft;
+		eventObj.pageY=eventObj.clientY+document.body.scrollTop;
+		eventObj.preventDefault=function()
+		{
+			eventObj.returnValue=false;
+		}
+		
+		if(eventObj.type=="mouseover")
+		{
+			eventObj.relatedTarget=eventObj.toElement;
+		}
+		else if(eventObj.type=="mouseout")
+		{
+			eventObj.relatedTarget=eventObj.fromElement;			
+		}
+		else
+		{
+			eventObj.relatedTarget=null;
+		}
+		
+		eventObj.stopPropagation=function()
+		{
+			eventObj.cancelBubble=true;
+		}
+		
+		eventObj.target=eventObj.srcElement;
+		eventObj.timeStamp=(new Date()).getTime();
+		
+		
+	}
+	
+	return eventObj;
+}
+
+complexEvent.getEvent=function()
+{
+	if(window.event)
+	{
+		return this.formatEvent(window.event);
+	}
+	else
+	{
+		return this.formatEvent(complexEvent.getEvent.caller.arguments[0]);
+	}
+}
+
+var div=document.getElementById("div");
+div.onclick=function()
+{
+	var event=complexEvent.getEvent();
+	alert(div);
+}
+
+function click()
+{
+	alert("单击层，动态添加事件处理函数成功\n 事件处理函数即将被移除，再次单击没有事件处理函数响应");
+	var div=document.getElementById("div");
+	complexEvent.removeEventHandler(div,"click",click);
+}
+
+window.onload=function()
+{
+	var div=document.getElementById("div");
+	complexEvent.addEventhandler(div,"click",click);
+}
+		</script>
+	</head>
+	<body>
+		<div id="div" style="width:400px;height:30px;background-color:#ffccdd"></div>
+	</body>
+</html>

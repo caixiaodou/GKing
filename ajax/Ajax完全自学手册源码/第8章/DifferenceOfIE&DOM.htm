@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+	
+	</head>
+	<body>
+		<div style="background-color:#ffccdd;color:#fffff;width:400px:height:30px" onmouseover="mouseOver(event)" id="div" >我的单击层</div>
+			<script type=text/javascript language=JavaScript>
+
+function mouseOver(event)
+{
+	var event;
+	if(document.all)
+		event=window.event;
+	else
+		event=arguments[0];
+
+	event.returnValue=false;
+	event.preventDefault();
+}
+
+		</script>
+	</body>
+</html>
+
+<!--function getEventType()
+{
+	var event;
+	if(document.all)
+		event=window.event;
+	else
+		event=arguments[0];
+	var eventType=event.type;
+	alert(eventType);
+	if(eventType=="click")
+	{
+		alert("单击事件");
+	}
+	else if(eventType=="mouseover")
+	{
+		alert("鼠标移入");
+	}
+}
+var div=document.getElementById("div");
+div.onclick=getEventType;
+div.onmouseover=getEventType;
+
+<div style="background-color:#ffccdd;color:#fffff;width:400px:height:30px" id="div">我的点击层</div>
+-->

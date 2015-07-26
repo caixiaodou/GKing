@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+			var xmlHttp;
+			
+			function createXmlHttpRequest()
+			{
+				if(window.ActieveXObject)
+				{
+					xmlHttp=new ActieveXObject("Microsoft.XMLHTTP");
+				}
+				else if(window.XMLHttpRequest)
+				{
+					xmlHttp=new XMLHttpRequest();
+				}
+			}
+			
+			function startRequest()
+			{
+				createXmlHttpRequest();
+				xmlHttp.onreadystatechange=readyStateChangeHandle;
+				xmlHttp.open("POST","Hello World.xml",true);
+				xmlHttp.send(null);	
+			}
+			
+			function readyStateChangeHandle()
+			{
+				if(xmlHttp.readyState==4)
+				{
+					if(xmlHttp.status==200)
+					{
+						var div=document.getElementById("divHelloWorld");
+						
+						var xmlDoc=xmlHttp.responseXML;
+						var data=xmlDoc.getElementsByTagName("data")[0].firstChild.nodeValue;
+						div.innerHTML="<b>"+data+"</b>";
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div align=center id="divHelloWorld" style="width:100%"></div>
+		<dir align=center style="width:100%">
+			<input type=button value="Hello World" id="btnRequest" onclick="startRequest()">
+		</dir>
+	</body>
+</html>

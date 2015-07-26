@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxTest4Cookie", "http://localhost/AjaxTest4Cookie/AjaxTest4Cookie.csproj", "{1A12DEF0-0CD3-4300-838D-9B57C5733145}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1A12DEF0-0CD3-4300-838D-9B57C5733145}.Debug.ActiveCfg = Debug|.NET
+		{1A12DEF0-0CD3-4300-838D-9B57C5733145}.Debug.Build.0 = Debug|.NET
+		{1A12DEF0-0CD3-4300-838D-9B57C5733145}.Release.ActiveCfg = Release|.NET
+		{1A12DEF0-0CD3-4300-838D-9B57C5733145}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

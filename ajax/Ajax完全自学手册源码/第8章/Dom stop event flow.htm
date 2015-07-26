@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html onclick="handlerClick(event)">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>IE中的事件流</title>
+		<script type=text/javascript language=JavaScript>
+function handlerClick(event)
+{
+	var event=arguments[0];
+	alert(event.target);
+	event.stopPropagation();
+}
+		</script>
+	</head>
+	<body onclick="handlerClick(event)">
+		<input type=button onclick="handlerClick(event)"  value="点击我"  />
+	</body>
+</html>

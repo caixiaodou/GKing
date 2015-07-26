@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Window对象的Event属性</title>
+		<script type=text/javascript language=JavaScript>
+function load()
+{
+	var div=document.getElementById("clickDiv");
+div.onclick=function()
+{
+	alert(1);
+	alert(window.event);
+	var event=window.event;
+	alery(event);
+}
+}
+		</script>
+	</head>
+	<body>
+			<div id="clickDiv" style="background-color:#ffccdd;color:#00000">单击</div>
+			<input type=button onclick="load()"  id=="btn" name=="btn" value="单击" />
+	</body>
+</html>

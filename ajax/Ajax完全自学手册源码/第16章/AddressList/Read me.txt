@@ -1,0 +1,2 @@
+请首先安装SQL Server 2000
+然后将CreateTable.sql在查询分析器执行 而后运行工程

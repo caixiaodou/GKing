@@ -1,0 +1,272 @@
+
+
+
+
+
+
+
+<html>
+<head>
+
+<title> CCTV-1节目预告 </title>
+
+
+
+
+<script type="text/javascript">
+  var dayIdx=2;var curAreaID="CCTV";
+</script>
+<style>
+p { font-size:12px;margin: 6px;}
+a.addbtn{visibility :hidden}
+#favchnl{float:left;background-color: #EEF9E6;margin:1px;padding:4px!important;padding:3px 0 0 1px;height:12px;}
+#nettv div{background-color:#FFFFFF}
+.tv_guide {border:1px solid #dcdcdc;margin-left:35px;padding:0 2px;background-color:#f2f5f7}
+.pgnav
+{
+  border-bottom: 1px solid #75A3ED;
+  border-top: 1px solid #75A3ED;
+  background-color: White;
+}
+img{margin:2px}
+</style>
+</head>
+
+<body>
+
+<table width="100%" height="90" border="0" cellpadding="0" cellspacing="0" class="black">
+  <tr>
+    <td width="320"  rowspan="2"></td>
+    <td align="right" style="padding:0 20px 0 0;">
+     <script type="text/javascript" src="http://www.tvmao.com/static_menu.js"></script>
+    </td>
+  </tr>
+  <tr>
+   <td height="60" colspan="2"  align="right" valign="middle" style="padding:0 4px 0 0;">
+   <table width="100%"  border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+        </td>
+        <td align="center"><form name="Q" method="get" action="/query">
+         
+        
+    </form></td>
+    </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript" src="http://www.tvmao.com/js/pg.js"></script>
+<table width="100%"  border="0" cellpadding="1" cellspacing="0">
+  <tr>
+    <td width="200" height="26" align="center"></td>
+    <td  align="left">本周：星期一  星期三 星期四 星期五 星期六 星期日 
+    </td>
+      <!-- td width="150" nowrap></td -->
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="190" valign="top" style="border: 1px solid #C0DDFA;padding:4px" rowspan="2">
+        <div class="bold_title">中央台频道列表</div>
+
+        <div class="p_barlist_ext"><b>中央电视台</b></div>
+
+        <div class="c_barlist"><b></b></div>
+
+        <div class="c_barlist">中央电视台经济频道</div>
+
+        <div class="c_barlist">中央电视台综艺频道</div>
+
+        <div class="c_barlist">中央电视台中文国际频道</div>
+
+        <div class="c_barlist">中央电视台奥运频道</div>
+
+        <div class="c_barlist">中央电视台电影频道</div>
+
+        <div class="c_barlist">中央电视台军事农业频道</div>
+
+        <div class="c_barlist">中央电视台电视剧频道</div>
+
+        <div class="c_barlist">中央电视台英文频道</div>
+
+        <div class="c_barlist">中央电视台科教频道</div>
+
+        <div class="c_barlist">中央电视台戏曲频道</div>
+
+        <div class="c_barlist">中央电视台法制频道</div>
+
+        <div class="c_barlist">中央电视台新闻频道</div>
+
+        <div class="c_barlist">中央电视台少儿频道</div>
+
+        <div class="c_barlist">中央电视台音乐频道</div>
+
+        <div class="c_barlist">中央电视台西语频道</div>
+
+        <div class="c_barlist">CCTV-4欧洲频道</div>
+
+        <div class="c_barlist">CCTV-4美洲频道</div>
+
+        <div class="c_barlist">中央电视台法语频道</div>
+
+        <div class="p_barlist"><b>央视高清电视</b></div>
+
+        <div class="p_barlist"><b>中数传媒</b></div>
+
+        <div class="p_barlist"><b>中国教育台</b></div>
+
+        <div class="list_" style="text-align:center">
+        <!-- WN_AD_VAR -->
+
+
+        </div>
+
+       <div class="bold_title">电视节目分类</div>
+       <div class="list_">军事 科学自然 生活人文 体育健康 <br>新闻综合 少儿动漫 教育法制 财经 <br>戏曲 电影 电视剧 综艺娱乐 </div>
+       
+    </td>
+    <td width="4" rowspan="2"></td>
+    
+    <td align=left valign="top" height="100%" class=mainbody style="border-right: 0px solid #B7DD88;">
+    
+      <h1 class="radio_name">CCTV-1节目预告</h1>
+      
+      <div style="float:right">
+      <p>
+      	<!-- WN_AD_VAR -->
+
+
+      	</p>
+      <!-- <p></p> -->
+      <div class="ggad" style="margin:8px"><!-- GG_336_280_PG -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-1749350995351361";
+google_alternate_ad_url = "http://www.tvmao.com/ad/BD_336_280.html";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_type = "text";
+google_ad_channel = "3959493167";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "0379C0";
+google_color_text = "000000";
+google_color_url = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+      </div>
+      <div id="pg">
+      <div><b>04-01 星期二 中午 晚间</b></div>
+      <div id="pgrow"> <div style="display: inline;">电视剧:卧薪尝胆20/41 卧薪尝胆分集剧情 </div></div>
+<div id="pgrow"> <div style="display: inline;">见证:2008-81  </div></div>
+<div id="pgrow"> <div style="display: inline;">讲述:2008-91(讲述：DV激流中的营救)  </div><div class="tv_guide" style="display:block;" id="tv2">2007年11月26日，广东省阳山县23名学生在郊外游玩时被山洪围困，经过当地消防战士的及时营救，最后全部脱离了险境...  讲述:讲述：DV激流中的营救本期内容(全文)</div></div>
+<div id="pgrow"> <div style="display: inline;">探索.发现:2008-83  </div></div>
+<div id="pgrow"> <div style="display: inline;">点播时间2006-26  </div></div>
+<div id="pgrow"> <div style="display: inline;">中华民族:2008-12(中华民族：《琴江风云》第1集)  </div><div class="tv_guide" style="display:block;" id="tv5">在我国东南沿海福建省长乐市的琴江村，有一个满族村。这里曾是一个满族的水师兵营，被称为三江口水师旗营。这是清朝最早设立的水师旗营之一，也是迄今遗留的唯一一个较为完整的水师旗营遗址。当时的营房建设得非常完备，有官兵住房、将军行辕、各级衙门、轮...  中华民族:中华民族：《琴江风云》第1集本期内容(全文)</div></div>
+<div id="pgrow"> <div style="display: inline;">科技博览:2008-58  </div></div>
+<div id="pgrow"> <div style="display: inline;">讲述:2008-91(讲述：DV激流中的营救)  </div><div class="tv_guide" style="display:block;" id="tv7">2007年11月26日，广东省阳山县23名学生在郊外游玩时被山洪围困，经过当地消防战士的及时营救，最后全部脱离了险境...  讲述:讲述：DV激流中的营救本期内容(全文)</div></div>
+<div id="pgrow"> <div style="display: inline;">探索.发现:2008-83  </div></div>
+<div id="pgrow"> <div style="display: inline;">见证:2008-81  </div></div>
+<div id="pgrow"> <div style="display: inline;">走近科学（精编版）:2008-83  </div></div>
+<div id="pgrow"> <div style="display: inline;">焦点访谈([焦点访谈]服务民生五年间——“两会”特别报道（三）)  </div><div class="tv_guide" style="display:block;" id="tv11">[焦点访谈]服务民生五年间——“两会”特别报道（三） 首播：CCTV-103月05日 19:38重播：CCTV-103月06日 15:30视频截图视频截图视频截...  焦点访谈:[焦点访谈]服务民生五年间——“两会”特别报道（三）本期内容(全文)</div></div>
+<div id="pgrow"> <div style="display: inline;">我的奥林匹克:2008-65  </div></div>
+<div id="pgrow"> <div style="display: inline;">法治在线  </div></div>
+<div id="pgrow"> <div style="display: inline;">朝闻天下  </div></div>
+<div id="pgrow"> <div style="display: inline;">天天饮食:2008-85(天天饮食：剁椒粉丝蒸茄子)  </div><div class="tv_guide" style="display:block;" id="tv15">主料：长茄子辅料：粉丝、剁椒酱、冬菇、蒜蓉、海米调料：盐、味精、白糖、料酒、蚝油、香油烹制方法：　　1、将茄子洗净后切成段，放入平锅中小火略煎至表面微黄取出备用；　　2、取一盘子，用粉丝铺底放入茄子，剁椒酱中加入冬菇丝、蒜蓉、海米、料酒、...  天天饮食:天天饮食：剁椒粉丝蒸茄子本期内容(全文)</div></div>
+<div id="pgrow"> <div style="display: inline;">夕阳红  </div></div>
+<div id="pgrow"> <div style="display: inline;">电视剧:黄河那道弯11/20 黄河那道弯分集剧情 </div></div>
+<div id="pgrow"> <div style="display: inline;">电视剧:黄河那道弯12/20  </div></div>
+<div id="pgrow"> <div style="display: inline;">电视剧:黄河那道弯13/20  </div></div>
+<div id="pgrow"> <div style="display: inline;">新闻30分  </div></div>
+<div id="pgrow"> <div style="display: inline;">今日说法:2008-85  </div></div>
+<div id="pgrow"> <div style="display: inline;">电视剧:意难忘(2)12/160 意难忘分集剧情 </div></div>
+<div id="pgrow"> <div style="display: inline;">电视剧:意难忘(2)13/160  </div></div>
+<div id="pgrow"> <div style="display: inline;">走近科学（精编版）:2008-83  </div></div>
+<div id="pgrow"> <div style="display: inline;">当代工人:2008-13  </div></div>
+<div id="pgrow"> <div style="display: inline;">半边天:2008-66  </div></div>
+<div id="pgrow"> <div style="display: inline;">科技博览:2008-59  </div></div>
+<div id="pgrow"> <div style="display: inline;">天天饮食:2008-85(天天饮食：剁椒粉丝蒸茄子)  </div><div class="tv_guide" style="display:block;" id="tv28">主料：长茄子辅料：粉丝、剁椒酱、冬菇、蒜蓉、海米调料：盐、味精、白糖、料酒、蚝油、香油烹制方法：　　1、将茄子洗净后切成段，放入平锅中小火略煎至表面微黄取出备用；　　2、取一盘子，用粉丝铺底放入茄子，剁椒酱中加入冬菇丝、蒜蓉、海米、料酒、...  天天饮食:天天饮食：剁椒粉丝蒸茄子本期内容(全文)</div></div>
+<div id="pgrow"> <div style="display: inline;">东方时空  </div></div>
+<div id="pgrow"> <div style="display: inline;">动画城:2008-79  </div></div>
+<div id="pgrow"> <div style="display: inline;">大风车:2008-90  </div></div>
+<div>晚间节目</div>
+<div class=ggad style='float:right;margin:8px'><!-- GG_336_280 -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-1749350995351361";
+google_alternate_ad_url = "http://www.tvmao.com/ad/BD_336_280.html";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "0379C0";
+google_color_text = "000000";
+google_color_url = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div id="pgrow"> <div style="display: inline;">新闻联播  </div></div>
+<div id="pgrow"> <div style="display: inline;">焦点访谈([焦点访谈]服务民生五年间——“两会”特别报道（三）)  </div><div class="tv_guide" style="display:block;" id="tv33">[焦点访谈]服务民生五年间——“两会”特别报道（三） 首播：CCTV-103月05日 19:38重播：CCTV-103月06日 15:30视频截图视频截图视频截...  焦点访谈:[焦点访谈]服务民生五年间——“两会”特别报道（三）本期内容(全文)</div></div>
+<div id="pgrow"> <div style="display: inline;">电视剧:清凌凌的水蓝莹莹的天23/27 清凌凌的水蓝莹莹的天分集剧情 </div></div>
+<div id="pgrow"> <div style="display: inline;">电视剧:清凌凌的水蓝莹莹的天24/27  </div></div>
+<div id="pgrow"> <div style="display: inline;">我的奥林匹克:2008-66  </div></div>
+<div id="pgrow"> <div style="display: inline;">晚间新闻  </div></div>
+<div id="pgrow"> <div style="display: inline;">奥运进行时2008年4月1  </div></div>
+<div id="pgrow"> <div style="display: inline;">特别节目:今天故事汇27  </div></div>
+<div id="pgrow"> <div style="display: inline;">电视剧:卧薪尝胆21/41 卧薪尝胆分集剧情 </div></div>
+
+      </div> 
+
+
+
+
+      <p></p>
+    </td>
+    <td width="4"></td>
+    <td width="250" valign="top" style="background-color:#FFFFFF; border: 1px solid #C0DDFA;padding:2px">
+
+    <div class="ntv_bold_title">中央电视台在线直播地址</div>
+    <div id="nettv">    
+    <div class=list_><b>CCTV1综合</b>[UUSEE]</div><div class=list_><b>CCTV1综合频道_CCTV1</b>[SOPCAST]</div><div class=list_><b>CCTV1综合频道_CCTV1-i</b>[SOPCAST]</div><div class=list_><b>CCTV1</b>[TVANTS]</div>
+    <div class=list_>更多网络电视&gt;&gt;</div>
+    </div> 
+
+    <br>
+    <h2 class="gtitle">中央电视台综合频道频道介绍</h2>
+    <p>
+       中央电视台综合频道 (CCTV-1)，又名中央台综合频道，中央一套，中央一台，中央1套，中央电视台1台，中央电视台1频道，CCTV-1， 于1958年9月2日正式播出，通过亚太1A、鑫诺1号卫星覆盖全国，是中国中央电视台开办最早、影响力最大的综合频道。<br><br>
+       
+       中央电视台综合频道节目表官方网站地址:
+       http://www.cctv.com/
+    </p>        
+    <h2 class="gtitle">合作商链接</h2>
+    <p>中国影讯网</p>
+    <p>上百万免费视频</p>
+    <p>9991精彩网址</p>
+    <p>好看123 网址之家</p>
+    <p>疾风视频</p>
+    <br>
+  </td>
+</tr>
+<tr>
+  <td colspan="3">本周：星期一  星期三 星期四 星期五 星期六 星期日 
+    </td>
+  <td></td>
+</tr>
+</table>
+<script type="text/javascript">init();</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">_uacct = "UA-270816-1";urchinTracker();</script>
+<script language="JavaScript" src="/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSystem", "http://localhost/ChatSystem/ChatSystem.csproj", "{C8944CCE-9B66-4EBA-9C04-B4CD774361F7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C8944CCE-9B66-4EBA-9C04-B4CD774361F7}.Debug.ActiveCfg = Debug|.NET
+		{C8944CCE-9B66-4EBA-9C04-B4CD774361F7}.Debug.Build.0 = Debug|.NET
+		{C8944CCE-9B66-4EBA-9C04-B4CD774361F7}.Release.ActiveCfg = Release|.NET
+		{C8944CCE-9B66-4EBA-9C04-B4CD774361F7}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

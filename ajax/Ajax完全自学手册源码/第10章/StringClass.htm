@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>×Ö·ûÀàÑÝÊ¾</title>
+		<script type=text/javascript language=JavaScript>
+var str="at,bt,ct";
+var reg=/[abc]t/;
+alert(reg.test(str));
+
+var str="at,bt,ct";
+var reg=/[^a]t/gi;
+alert(str.match(reg));
+
+var str="at,bt,ct";
+var reg=/[a-z]t/gi;
+alert(str.match(reg));
+
+var str="num1,num2,num3,num4,num5,num6";
+var reg=/num[^1-4]/gi;
+alert(str.match(reg));
+
+var str="<C,>c,ac,3c";
+var reg=/[a-z1-9]c/gi;
+alert(str.match(reg));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

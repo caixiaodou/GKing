@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>ÎªFirefoxµÄXML DOM¶ÔÏóÌí¼ÓloadXML·½·¨</title>
+		<script type=text/javascript language=JavaScript>
+Document.prototype.loadXML=function(xmlString)
+{
+	var domParser=new DOMParser();
+	var xmlDom=domParser.parseFromString(xmlString);
+	
+	while(this.firstChild)
+	{
+		this.removeChild(this.firstChild);
+	}
+	
+	for(var i=0;i<xmlDom.childNodes.length;i++)
+	{
+		var newNode=this.importNode(xmlDom.childNodes[i],true);<!--ÅÐ¶Ïµ±Ç°¶ÔÏóÊÇ·ñ°üº¬¸Ã½Úµã-->
+		this.appendChild(newNode);
+	}
+}	
+	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>学习DOM对象</title>
+		<script type=text/javascript language=JavaScript>
+			var dom=document.documentElement;//实际上一切HTML页面的documentElement节点就是<html></html>元素
+			function testDom()
+			{
+				var head=dom.childNodes.item(0);//<head></head>元素是<html></html>元素的第一个子节点；
+				var body=dom.childNodes.item(1);//<body></body>元素是<html></html>元素的第二个子节点；
+				
+				alert(head.parentNode==dom);//判断<head></head>元素的父节点是否是<html></html>元素
+				alert(body.parentNode==dom);//判断<body></body>元素的父节点是否是<html></html>元素
+				alert(head.nextSibling==body);//判断<head></head>元素的下一个同级节点是否是<body></body>元素
+				alert(body.previousSibling==head)//判断<body></body>元素的下一个同级节点是否是<head></head>元素
+				alert(head.ownerDocument==dom);//判断<head></head>元素的文档节点是否是<html></html>元素
+				alert(body.ownerDocument==dom);//判断<body></body>元素的文档节点是否是<html></html>元素
+				
+				var myNodeType;
+				myNodeType=document.nodeType;//myNodeType的值为9
+				if(typeof Node == "undefined")
+				{
+					var Node={
+						ELEMENT_NODE:1,
+						ATTRIBUTE_NODE:2,
+						TEXT_NODE:3,
+						CDATA_SECTION_NODE:4,
+						ENTITY_REFERENCE_NODE:5,
+						ENTITY_NODE:6,
+						PROCESSING_INSTRUCTION_NODE:7,
+						COMMENT_NODE:8,
+						DOCUMENT_NODE:9,
+						DOCUMENT_TYPE_NODE:10,
+						DOCUMENT_FRAGMENT_NODE:11,
+						NOTATION_NODE:12
+					}	
+				}
+				alert(myNodeType==Node.DOCUMENT_NODE);
+			
+			
+			}
+			
+			
+		</script>
+	</head>
+	<body onload="testDom();">
+		<h1>DOM对象的学习</h1>
+		<b>什么是DOM对象</b>
+		<p>掌握DOM对象是一种非常必要的技巧</p>
+	</body>
+</html>
+
+		 

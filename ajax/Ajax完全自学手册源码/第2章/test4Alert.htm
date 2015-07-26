@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+			function testAlert()
+			{
+				window.alert("这就是alert()的效果");
+			}
+			function testConfirm()
+			{
+				window.confirm("这就是confirm()的效果");
+				if(window.confirm("提示信息"))
+				{
+					//当用户点击确定时执行的代码
+				}
+				else
+				{
+					//当用户点击取消时执行的代码
+				}
+			}
+			
+			function testPromt()
+			{
+				window.prompt("这就是prompt()的效果","prompt");	
+				var result=window.prompt("information","defaultValue");
+				if(result!=null)
+				{
+					//根据用户响应 执行的代码
+				}
+				else
+				{
+					//当用户点击取消执行的代码
+				}
+				
+				window.status="information";//设定状态栏信息
+				window.defaultStatus="information";//设定状态栏没人信息
+				
+				window.resizeTo(window.screen.availWidth,window.screen.availHeight);
+				window.setTimeout(code,msNum);
+			}
+		</script>
+	</head>
+	<body>
+		<input type=button id="btnOpenWindow" onclick="testPromt();" value="弹出对话框" >
+	</body>
+</html>

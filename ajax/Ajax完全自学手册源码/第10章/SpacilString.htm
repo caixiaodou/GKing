@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>特殊字符</title>
+		<script type=text/javascript language=JavaScript>
+var reg=/\x2E/;
+var str=".NET";
+alert(reg.test(str));
+
+var reg=/\56/;
+var str=".NET";
+alert(reg.test(str));
+
+var reg=/\u002E/;
+var str=".NET";
+alert(reg.test(str));
+
+
+var reg=new RegExp("\\u002E");
+var str=".NET";
+alert(reg.test(str));
+
+var reg=new RegExp("\\n","g");
+var str=".net\n"+"是一项非常好的编程技术";
+alert(str);
+var result=str.replace(reg,"");
+alert(result);
+
+var reg=/\n/g;
+var str=".net\n"+"是一项非常好的编程技术";
+alert(str);
+var result=str.replace(reg,"");
+alert(result);
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

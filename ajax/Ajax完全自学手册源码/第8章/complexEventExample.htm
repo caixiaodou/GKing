@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>跨浏览器事件对象的实例</title>
+		<script type=text/javascript language=JavaScript src="complexEvent.js"></script>
+		<script type=text/javascript language=JavaScript>
+complexEvent.addEventhandler(window,"load",function()
+{
+	var divExample=document.getElementById("divExample");
+	complexEvent.addEventhandler(divExample,"mouseover",handleMouseEvent);
+	complexEvent.addEventhandler(divExample,"mouseout",handleMouseEvent);
+	complexEvent.addEventhandler(divExample,"mousedown",handleMouseEvent);
+	complexEvent.addEventhandler(divExample,"mouseup",handleMouseEvent);
+	complexEvent.addEventhandler(divExample,"click",handleMouseEvent);
+	complexEvent.addEventhandler(divExample,"dbclick",handleMouseEvent);
+})
+
+function handleMouseEvent()
+{
+	var eventObj=complexEvent.getEvent();
+	var demo=document.getElementById("demoMouseEvent");
+	demo.innerHTML="<b>当前鼠标事件名称："+eventObj.type+"</b><Br>";
+	demo.innerHTML+="事件源："+ eventObj.target.id+"<br>";
+	demo.innerHTML+="鼠标坐标X:"+eventObj.clientX+"&nbsp&nbsp&nbsp鼠标坐标Y："+eventObj.clientY+"<br>";
+	demo.innerHTML+="鼠标事件中relatedTarget 的ID:"+eventObj.relatedTarget.id+"<br>";	
+	switch(event.button)
+	{
+		case 0:
+			demo.innerHTML+="当前按下鼠标键:无<br>";
+			break;
+		case 1:
+			demo.innerHTML+="当前按下鼠标键:左键<br>";
+			break;
+		case 2:
+			demo.innerHTML+="当前按下鼠标键:右键<br>";
+			break;
+	}
+}	
+		</script>
+	</head>
+	<body>
+		<div id="divExample"
+		 style="background-color:#ACE356;height:20px;width:400px;">鼠标事件响应实例</div>
+		 <div  style="background-color:#F65327;height:20px;width:400px;"  id="demoMouseEvent"></div>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\WebQQ (2)\MyQQ\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\WebQQ (2)\MyQQ\bin\Debug\MyQQ.dll.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\WebQQ (2)\MyQQ\bin\Debug\MyQQ.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\WebQQ (2)\MyQQ\bin\Debug\MyQQ.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\WebQQ (2)\MyQQ\obj\Debug\MyQQ.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\WebQQ (2)\MyQQ\obj\Debug\MyQQ.pdb
+F:\正式开始写书\WebQQ\MyQQ\bin\Debug\MyQQ.dll.config
+F:\正式开始写书\WebQQ\MyQQ\bin\Debug\MyQQ.dll
+F:\正式开始写书\WebQQ\MyQQ\bin\Debug\MyQQ.pdb
+F:\正式开始写书\WebQQ\MyQQ\obj\Debug\ResolveAssemblyReference.cache
+F:\正式开始写书\WebQQ\MyQQ\obj\Debug\MyQQ.dll
+F:\正式开始写书\WebQQ\MyQQ\obj\Debug\MyQQ.pdb

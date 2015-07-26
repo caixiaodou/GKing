@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>操纵节点的演示</title>
+		<script type=text/javascript language=JavaScript>	
+			function byName()
+			{
+				var chk=document.getElementById("chkProgramme");//得到HTML DOM中Id属性为chkProgramme的Element节点
+				alert(chk.id);//提示框显示该Element节点的Id属性值
+				
+				var tr=document.getElementById("trUserName");
+				tr.createAttribute("border");
+				tr.createCDATASection("asdasda");
+				chk.createAttribute("Border");
+				chk.createCDATASection("asda");
+			}
+		</script>
+	</head>
+	<body onload="TagName();">
+		<div align=center style="width:100%">
+			<div align=center style="width:50%">
+				<table border=0 cellpadding=0 cellspacing=0>
+					<tr valign=top style="width:100%" id="trUserName" align=center>
+						<th>爱好</th>
+					</tr>
+					<tr valign=top style="width:100%" align=center>
+						<td>
+							<input type=checkbox id="chkProgramme" name="chkProgramme" value="编程">编程
+							<input type=checkbox id="chkRead" name="chkRead" value="看书">看书
+							<input type=checkbox id="chkGame" name="chkGame" value="游戏">游戏
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2 align=center>
+							<input type=submit id="btnOk" name="btnOk" value="确定" onclick="byName();">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
+<!--
+function TagName()
+			{
+				var trs=document.getElementsByTagName("tr");
+				for(var i=0;i<trs.length;i++)
+				{
+					alert(trs[i].id);
+				}
+			}
+
+<div align=center style="width:100%">
+			<div align=center style="width:50%">
+				<table border=0 cellpadding=0 cellspacing=0>
+					<tr valign=top style="width:100%" id="trUserName">
+						<td width=30%>
+							用户名
+						</td>
+						<td>
+							<input type=text id="txtUserName" name="txtUserName">
+						</td>
+					</tr>
+					<tr valign=top style="width:100%" id="trPWd">
+						<td width=30%>
+							密  码
+						</td>
+						<td>
+							<input type=text id="txtPwd" name="txtPwd">
+						</td>
+					</tr>
+					<tr valign=top style="width:100%" id="trLogin">
+						<td colspan=2 align=center>
+							<input type=submit id="btnLogin" name="btnLogin" value="登陆">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+-->

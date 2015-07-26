@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//ZH-CN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<script type=text/javascript language=JavaScript>
+function Say(content)
+{
+	alert(this.name+"说:  "+content);//这里的Say方法只有一个参数
+}
+var obj=new Object();			
+obj.name="hongbo";
+
+Say.apply(obj,new Array(" 请注意，这里是apply调用的"));//第一个参数是调用Say方法的对象即Say方法中的this指代的对象
+//第二个参数是Say方法的参数列表组成的数组
+		</script>
+	<head>
+	<body>
+		
+	</body>
+</html>

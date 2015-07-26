@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>try   catch</title>
+		<script type=text/javascript language=JavaScript>
+try
+{
+	window.noFoundFunction();	
+}
+catch(exception)
+{
+	alert(exception.message);
+	try
+	{
+		eval("x+++b");
+	}
+	catch(exception1)
+	{
+		alert(exception1.message);
+	}
+	alert("catch 语句块");
+}
+finally
+{
+	alert("finally 语句块");
+}
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

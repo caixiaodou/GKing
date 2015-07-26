@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://blog.csdn.net/hongbo0521" targetNamespace="http://blog.csdn.net/hongbo0521" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--elementDefault设定目标命名空间中的元素是否受到控制
+
+-->
+	<xs:element name="Book">
+		<xs:annotation>
+			<xs:documentation>定义一本书籍</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="专业技术类书籍"/>
+					<xs:element name="语言研究类书籍"/>
+					<xs:element name="软件工程书籍"/>
+				</xs:choice>
+				<xs:element ref="Writer" maxOccurs="2"/>
+				<xs:element ref="Reader" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Person" abstract="true">
+		<xs:annotation>
+			<xs:documentation>特定基类 </xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Name" use="required">
+			<xs:annotation>
+				<xs:documentation>姓名 必填属性 </xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="\S+"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Age">
+			<xs:annotation>
+				<xs:documentation>年龄必须在18 至60之间</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:minExclusive value="18"/>
+					<xs:maxExclusive value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="QQNumber">
+			<xs:annotation>
+				<xs:documentation>QQ号码 必须是数字</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:integer"/>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Email" use="required">
+			<xs:annotation>
+				<xs:documentation>邮箱</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Sex" default="男">
+			<xs:annotation>
+				<xs:documentation>性别</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="男"/>
+					<xs:enumeration value="女"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Writer">
+		<xs:annotation>
+			<xs:documentation>定义作者</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Person">
+					<xs:sequence>
+						<xs:element name="Skills">
+							<xs:annotation>
+								<xs:documentation>定义作者的专业技能</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="Skill" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Reader">
+		<xs:annotation>
+			<xs:documentation>定义读者</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Person">
+					<xs:attribute name="Study" type="xs:string"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="SkillLevel">
+		<xs:annotation>
+			<xs:documentation>定义技能熟练程度</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="精通"/>
+					<xs:enumeration value="熟悉"/>
+					<xs:enumeration value="一般"/>
+					<xs:enumeration value="了解"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="4"/>
+					<xs:enumeration value="3"/>
+					<xs:enumeration value="2"/>
+					<xs:enumeration value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:element name="Skill">
+		<xs:annotation>
+			<xs:documentation>定义技能</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="SkillName" type="xs:string"/>
+			<xs:attribute name="SkillLevel" type="SkillLevel"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

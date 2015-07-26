@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>电子邮件验证</title>
+		<script type=text/javascript language=JavaScript>
+var reg4Email=/^(?:\w+\.?)*\w+@(?:\w+\.?)*\w+$/;
+alert(reg4Email.test("hongbo0521@sina.com"));
+
+
+function validateEmail(emailStr)
+{
+	var reg4Email=/^(?:\w+\.?)*\w+@(?:\w+\.?)*\w+$/;
+	return reg4Email.test(emailStr);
+}
+
+alert(validateEmail("hongbo0521@sina.com"));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF8" />
+		<title>IE中的XMLDOM对象支持</title>
+		<script type=text/javascript language="JavaScript">
+function createXmlDom()
+{
+	var xmlDomVersions=new Array("MSXML2.DOMDocument.5.0",
+								"MSXML2.DOMDocument.4.0",
+								"MSXML2.DOMDocument.3.0",
+								"MSXML2.DOMDocument",
+								"Microsoft.XmlDom");
+							
+	for(var i=0;i<xmlDomVersions.length;i++)
+	{
+		try
+		{
+			var xmlDom=new ActiveXObject(xmlDomVersions[i]);<!--实例化XML DOM ActiveX对象-->
+			return xmlDom;<!--实例化成功马上返回XML DOM ActiveX对象-->
+		}
+		catch(error)
+		{
+			continue;
+		}	
+	}
+	
+	throw new Error("客户端浏览器版本过低，不支持XML DOM，请下载XML DOM");<!--如果不能实例化对象 抛出错误 要求客户下载XML DOM--->
+}
+
+var xmlDom=createXmlDom();
+
+xmlDom.async=false;<!--设定载入方式为同步载入方式-->
+xmlDom.loadXML("<Coder>洪波</Coder>");
+
+xmlDom.load("TestData.xml");
+xmlDom.onreadystatechange=function()
+{
+	if(xmlDom.readyState==4)<!--判断XML文档的载入是否完成-->
+	{
+		alert("文档载入完毕，可以进行读取");
+	}
+}
+document.write(xmlDom.firstChild.firstChild.data);
+var node=xmlDom.documentElement.childNodes[1];
+document.write(node.xml);
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

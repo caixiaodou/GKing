@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+	
+	</head>
+	<body>
+		
+		<input type="text" id="txtName" onkeydown="keyDown(event)" onkeyup="keyUp(event)" name="txtName" />
+			<script type=text/javascript language=JavaScript>
+function keyDown(event)
+{
+	var event;
+	if(document.all)
+		event=window.event;
+	else
+		event=arguments[0];
+
+	var keyCode=event.keyCode;
+if(event.isChar)
+{
+	var charCode=event.charCode;
+}
+	alert(char);
+	alert(charCode);
+	alert(keyCode);
+}
+
+function keyUp(event)
+{
+	var event;
+	if(document.all)
+		event=window.event;
+	else
+		event=arguments[0];
+
+	var keyCode=event.keyCode;
+	alert(keyCode);
+}
+		</script>
+	</body>
+</html>
+
+<!--function getEventType()
+{
+	var event;
+	if(document.all)
+		event=window.event;
+	else
+		event=arguments[0];
+	var eventType=event.type;
+	alert(eventType);
+	if(eventType=="click")
+	{
+		alert("单击事件");
+	}
+	else if(eventType=="mouseover")
+	{
+		alert("鼠标移入");
+	}
+}
+var div=document.getElementById("div");
+div.onclick=getEventType;
+div.onmouseover=getEventType;
+
+<div style="background-color:#ffccdd;color:#fffff;width:400px:height:30px" id="div">我的点击层</div>
+-->

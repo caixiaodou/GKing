@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>处理属性</title>
+		<script type=text/javascript language=JavaScript>
+			function testAtr()
+			{
+				var atr;
+				var dom=document.documentElement;
+				var body=dom.childNodes[1];
+				var div=body.childNodes[0];
+				atr=div.attributes.getNamedItem("border").nodeValue;
+				alert(atr);
+				div.setAttribute("border","10");
+			}
+		</script>
+	</head>
+	<body onload="testAtr()">
+		<table id="table" style="color:#ff00ff" border=1>
+			<tr>
+				<th>我</th>
+				<th>来</th>
+				<th>学习</th>
+				<th>DOM</th>
+			</tr>
+		</table>
+	</body>
+</html>

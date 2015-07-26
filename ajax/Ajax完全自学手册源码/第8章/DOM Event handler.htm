@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>IE中的事件处理函数</title>
+		<script type=text/javascript language=JavaScript>
+function handler()
+{
+	alert("handler");
+}
+
+function handler1(){
+	alert("handler1");
+}
+
+function addEvent()
+{
+	var add= document.getElementById("btn1");
+	add.onclick=handler1;
+	add.addEventListener("click",handler,true);
+}
+		</script>
+	</head>
+	<body>
+		<div id="btn1" style="width:200px;height:20px;background-color:#ffccdd"></div>
+		<input type=button value="添加事件" name="btn" id=="btn" onclick="addEvent()" />
+	</body>
+</html>
+<!--add.addEventListener("click",handler1,true);-->

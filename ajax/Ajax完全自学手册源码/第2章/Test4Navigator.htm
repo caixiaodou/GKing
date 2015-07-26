@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+			function alertNavigator()
+			{	
+				var div=document.getElementById("userAgent");
+				alert(window.navigator.userAgent);
+				div.innerHTML="<b>"+window.navigator.userAgent+"</b>";
+			}
+			
+			function checkBrowserVersion()
+			{
+				alert(window.navigator.userAgent.indexOf("MSIE 6."));
+				alert(window.navigator.userAgent.indexOf("MSIE 5."));
+				//检测是否是IE
+				if(window.navigator.userAgent.indexOf("MSIE")>-1)
+				{
+					//检测IE版本是否是5.0或5.0以上
+					if(window.navigator.userAgent.indexOf("MSIE 5.")>-1)
+					{
+						
+					}
+					//检测IE版本是否是6.0或6.0以上
+					else if(window.navigator.userAgent.indexOf("MSIE 6.")>-1)
+					{
+						
+						
+					}
+				}
+				//检测Firefox版本号
+				else if(parseFloat(window.navigator.appVersion)>=3.0)
+				{
+					//可以使用Mozilla 3.0浏览器版本功能
+				}
+			}
+			
+			function checkBrowserVersion()
+			{
+				//检测是否是IE
+				if(window.navigator.userAgent.indexOf("MSIE")>-1)
+				{
+					//检测IE版本是否是5.0或5.0以上
+					if(window.navigator.userAgent.indexOf("MSIE 5.")>-1)
+					{
+						
+					}
+					else
+					{
+						
+					}
+				}
+				//检测Firefox版本号
+				else if(parseFloat(window.navigator.appVersion)>=3.0)
+				{
+					//可以使用Mozilla 3.0浏览器版本功能
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type=button id="btnNavigator" name="btnNavigator" value="点击"  onclick="checkBrowserVersion()">
+		<div id="userAgent"></div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TVLIST>
+  <TVSET name="CCTV">
+    <Chanel>中央1套</Chanel>
+    <Chanel>中央2套</Chanel>
+    <Chanel>中央3套</Chanel>
+    <Chanel>中央4套</Chanel>
+    <Chanel>中央5套</Chanel>
+    <Chanel>中央6套</Chanel>
+    <Chanel>中央7套</Chanel>
+    <Chanel>中央8套</Chanel>
+    <Chanel>中央9套</Chanel>
+    <Chanel>中央10套</Chanel>
+    <Chanel>中央11套</Chanel>
+    <Chanel>中央12套</Chanel>
+  </TVSET>
+  <TVSET name="湖南">
+    <Chanel>湖南卫视</Chanel>
+    <Chanel>湖南影视</Chanel>
+    <Chanel>湖南娱乐</Chanel>
+  </TVSET>
+  <TVSET name="凤凰卫视">
+    <Chanel>凤凰卫视</Chanel>
+  </TVSET>
+</TVLIST>

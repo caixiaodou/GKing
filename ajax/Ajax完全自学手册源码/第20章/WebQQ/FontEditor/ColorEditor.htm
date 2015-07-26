@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>文本颜色编辑器</title>
+<script language="javascript" type="text/javascript">
+//十六进制字符数组
+var hexCharArray = new Array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F');	
+var endColor;
+var slcColor="#000000";
+var slcGray=120;
+
+function NumToHex(num)
+{
+	var h,l;
+	num=Math.round(num);//对num进行取整
+	l=num%16;
+	h=Math.floor(num/16)%16;
+	return (hexCharArray[h]+hexCharArray[l]);
+}
+
+//根据亮度调节颜色
+function MakeColor(c,l)
+{
+	var r,g,b;
+	//截取颜色的各个部分
+	r="0x"+c.substring(1,3);
+	g="0x"+c.substring(3,5);
+	b="0x"+c.substring(5,7);
+	
+    if(l > 120)
+    {
+        l = l - 120;
+
+        r = (r * (120 - l) + 255 * l) / 120;
+        g = (g * (120 - l) + 255 * l) / 120;
+        b = (b * (120 - l) + 255 * l) / 120;
+    }
+    else
+    {
+        r = (r * l) / 120;
+        g = (g * l) / 120;
+        b = (b * l) / 120;
+    }
+
+  return '#' + NumToHex(r) + NumToHex(g) + NumToHex(b);
+}
+
+
+//当鼠标移动选择颜色发生改变时 对颜色进行调整
+function endSlcColor()
+{
+	var i;
+	
+	if(slcColor!=endColor)
+	{
+		endColor=slcColor;
+		for(var i=0;i<30;i++)
+		{
+			tblGray.rows[i].bgColor=MakeColor(slcColor,240-i*8);
+		}
+		txtColorCode.value=MakeColor(spnRGB.innerText,spnGray.innerText);
+		tblShowColor.bgColor=txtColorCode.value;
+	}
+}
+</script>
+<script type="text/javascript" language="JavaScript" for="tblColor" event="onclick">
+	slcColor=window.event.srcElement.bgColor;
+	endSlcColor();
+</script>
+<script type="text/javascript" language="JavaScript" for="tblColor" event="onmouseover">
+	spnRGB.innerText=window.event.srcElement.bgColor;
+	endSlcColor();
+</script>
+<script type="text/javascript" language="JavaScript" for="tblColor" event="onmouseout">
+	spnRGB.innerText=window.event.srcElement.bgColor;
+	endSlcColor();
+</script>
+
+<script type="text/javascript" language="JavaScript" for="tblGray" event="onclick">
+	slcGray=window.event.srcElement.title;
+	endSlcColor();
+</script>
+<script type="text/javascript" language="JavaScript" for="tblGray" event="onmouseover">
+	spnGray.innerText=window.event.srcElement.title;
+	endSlcColor();
+</script>
+<script type="text/javascript" language="JavaScript" for="tblGray" event="onmouseout">
+	spnGray.innerText=slcGray;
+	endSlcColor();
+</script>
+
+<script type="text/javascript" language="JavaScript" for="btnSubmit" event="onclick">
+	window.returnValue=slcColor;
+	window.close();
+</script>
+</head>
+<body>
+    <div style="background-color: #a6a6a6;width:480px;height:446px; left: 0px; position: absolute; top: 0px;">
+    	<div style="background-color: #ffffff;width:450px;height:258px; left: 13px; position: absolute; top: 2px;font-family:宋体;font-size:9pt">
+    	    <center>
+    	        <table width="100%" cellpadding=0 cellspacing=0 border=0>
+    	            <tbody>
+    	                <tr width=100% valign=top>
+    	                    <td width=80%>
+    	                        <table cellpadding=0 cellspacing=0 border=0 align=center style="cursor:pointer" width="100%" id="tblColor">
+                        	            <script language="JavaScript">
+                        	            	function writeCell(r,g,b,n)
+											{
+												r = ((r * 16 + r) * 3 * (15 - n) + 0x80 * n) / 15;
+												g = ((g * 16 + g) * 3 * (15 - n) + 0x80 * n) / 15;
+												b = ((b * 16 + b) * 3 * (15 - n) + 0x80 * n) / 15;
+											
+												document.write('<TD BGCOLOR=#' + NumToHex(r) + NumToHex(g) + NumToHex(b) + ' height=8 width=8></TD>');
+											}
+											
+											var cnum = new Array(1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0);
+
+										  for(i = 0; i < 16; i ++)
+										  {
+										     document.write('<TR>');
+										     for(j = 0; j < 30; j ++)
+										     {
+										     	var n1 = j % 5;
+										     	var n2 = Math.floor(j / 5) * 3;
+										     	var n3 = n2 + 3;
+										
+										     	writeCell((cnum[n3] * n1 + cnum[n2] * (5 - n1)),
+										     		(cnum[n3 + 1] * n1 + cnum[n2 + 1] * (5 - n1)),
+										     		(cnum[n3 + 2] * n1 + cnum[n2 + 2] * (5 - n1)), i);
+										     }
+										
+										     document.writeln('</TR>');
+										  }
+                        	            </script>
+    	                        </table>
+    	                    </td>
+    	                    <td width=10%></td>
+    	                    <td width=10%>
+    	                        <table cellpadding=0 cellspacing=0 border=0 align=center style="cursor:pointer" width="100%" id="tblGray">
+                    	           <script language="JavaScript">
+                    	           	for(i = 255; i >= 0; i -= 8.5)
+ 											document.write('<TR BGCOLOR=#' + NumToHex(i) + NumToHex(i) + NumToHex(i) + '><TD TITLE=' + Math.floor(i * 16 / 17) + ' height=4 width=20></TD></TR>');
+                    	           </script> 
+    	                        </table>
+    	                    </td>
+    	                </tr> 
+    	            </tbody>
+    	        </table>
+    	    </center>
+        </div>
+        <div style="background-color: #dedbd6;width:450px;height:166px; left: 12px; position: absolute; top: 270px;font-family:宋体;font-size:9pt" id="DIV1">
+            <center>
+                <table cellpadding=0 cellspacing=0 border=0 width="70%" align=center>
+                    <tbody>
+                        <tr width=100% valign=top>
+                            <td width="50%">
+                                <table cellpadding=0 cellspacing=0 border=0 id="tblShowColor" width="80px" height=80px>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                            
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td width="50%">
+                                <table cellpadding=0 cellspacing=0 border=0 id="tblColorDetail" width="100%">
+                                    <tbody>
+                                        <tr width=100% valign=top>
+                                            <td width=30%>
+                                                基色:
+                                            </td>
+                                            <td>
+                                                <span id="spnRGB">#00000</span>
+                                            </td>
+                                        </tr>
+                                       <tr width=100% valign=top>
+                                            <td width=30%>
+                                                亮度:
+                                            </td>
+                                            <td>
+                                                <span id="spnGray">120</span>
+                                            </td>
+                                        </tr> 
+                                       <tr width=100% valign=top>
+                                            <td width=30%>
+                                                代码:
+                                            </td>
+                                            <td>
+                                                <input type=text id="txtColorCode" style="width:70%" value="#000000" />
+                                            </td>
+                                        </tr>
+                                       <tr width=100% valign=top>
+                                            <td colspan=2>
+                                                <button id="btnSubmit" type=submit>确定</button>
+                                               &nbsp;&nbsp;&nbsp; 
+                                               <button id="btnClose" type=submit onclick="window.close();">关闭</button> 
+                                            </td>
+                                        </tr>  
+                                    </tbody>
+                                </table>
+                            </td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </center>
+        </div>
+    </div>
+</body>
+</html>

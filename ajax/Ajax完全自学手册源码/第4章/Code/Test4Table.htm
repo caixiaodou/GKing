@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+function createTable()
+{
+	var table=document.createElement("table");//创建table节点
+	table.setAttribute("border","1");
+	table.setAttribute("width","30%");
+	
+	var caption=document.createElement("caption");<!--创建caption节点-->
+	var text=document.createTextNode("演示表");<!--创建capiton节点中的Text节点-->
+	caption.appendChild(text);<!--将Text节点添加至caption节点中 -->
+	table.appendChild(caption);<!--将caption节点追加到table子节点集合中-->
+	
+	var tHead=document.createElement("tHead");<!--创建tHead节点-->
+	tHead.setAttribute("bgcolor","#00ff00");
+	table.appendChild(tHead);<!--将tHead追加至table子节点集合-->
+	var row=tHead.insertRow(0);<!--创建tHead中的第一行-->
+	row.insertCell(0);<!--向<tr></tr>中添加单元格-->
+	row.insertCell(1);<!--向<tr></tr>中添加单元格-->
+	row.cells[0].appendChild(document.createTextNode("1"));<!--向单元格中添加文本节点-->
+	row.cells[1].appendChild(document.createTextNode("2"));<!--向单元格中添加文本节点-->
+	
+	var tBody1=document.createElement("tBody");<!--创建第一个tBody节点-->
+	tBody1.setAttribute("bgcolor","#00ff00");
+	table.appendChild(tBody1);
+	var row=tBody1.insertRow(0);
+	row.insertCell(0);
+	row.insertCell(1);
+	row.cells[0].appendChild(document.createTextNode("1"));
+	row.cells[1].appendChild(document.createTextNode("2"));
+	
+	var tBody2=document.createElement("tBody");<!--创建第二个tBodytHead节点-->
+	tBody2.setAttribute("bgcolor","#00ff00");
+	table.appendChild(tBody2);
+	var row=tBody1.insertRow(0);
+	row.insertCell(0);
+	row.insertCell(1);
+	row.cells[0].appendChild(document.createTextNode("1"));
+	row.cells[1].appendChild(document.createTextNode("2"));
+	
+	var tFoot=document.createElement("tFoot");<!--创建tFoot节点-->
+	tFoot.setAttribute("bgcolor","#00ff00");
+	table.appendChild(tFoot);
+	var row=tBody1.insertRow(0);
+	row.insertCell(0);
+	row.insertCell(1);
+	row.cells[0].appendChild(document.createTextNode("1"));
+	row.cells[1].appendChild(document.createTextNode("2"));
+	document.body.appendChild(table);
+}
+		</script>
+	</head>
+	<body onload="createTable()">
+<table border=1 width=30%>
+	<caption>演示表</caption>
+	<thead bgcolor="#00ff00">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+	</thead>
+	<tbody bgcolor="#d3d3f3">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+	</tbody>
+	<tbody bgcolor="#d300d3">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+	</tbody>
+	<tfoot bgcolor="#d3e3d3">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+	</tfoot>
+</table>
+	</body>
+</html>

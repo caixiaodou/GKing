@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkageList", "http://localhost/LinkageList/LinkageList.csproj", "{5BC02B49-2A3B-4A62-8792-2D1F554FF5F5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5BC02B49-2A3B-4A62-8792-2D1F554FF5F5}.Debug.ActiveCfg = Debug|.NET
+		{5BC02B49-2A3B-4A62-8792-2D1F554FF5F5}.Debug.Build.0 = Debug|.NET
+		{5BC02B49-2A3B-4A62-8792-2D1F554FF5F5}.Release.ActiveCfg = Release|.NET
+		{5BC02B49-2A3B-4A62-8792-2D1F554FF5F5}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

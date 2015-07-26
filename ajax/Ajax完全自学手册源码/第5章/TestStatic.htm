@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+function show()
+{
+
+function showMyMessage()
+{
+	window.alert(this.Message);
+}
+var alarm=new Object();
+alarm.Message="我的信息";
+alarm.showMessage=showMyMessage;
+
+alarm.showMessage();
+}
+
+function classDemo()
+{
+	window.alert("I am a classs");
+}
+classDemo.staticDemo=function()//设定当前函数为classDemo的属性
+{
+	window.alert("I am a staic property");
+}
+classDemo.staticDemo();
+
+		</script>
+	</head>
+	<body>
+		<input type=button name="btnShow" value="Show" onclick="show()">
+	</body>
+</html>

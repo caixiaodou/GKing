@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+function Person(name,age)<!--定义人类基类-->
+{
+	this.Name=name;
+	this.Age=age;
+	this.Intro=function()<!--自我介绍-->
+	{
+		alert("你好，我是"+this.Name);
+	}
+}
+
+function Coder(name,age)<!--定义程序员基类-->
+{
+	//this.Constructer=Person;<!--设定Person方法为程序员类的一个方法-->
+	//this.Constructer(name,age);<!--调用Person方法为程序员类的属性进行赋值-->
+	//delete this.Constructer;<!--删除Person方法-->
+	Person.apply(this,Coder.Arguments);
+	
+	this.Code=function()
+	{
+		alert("我在努力写代码");
+	}
+}
+
+var person=new Person("reader",20);<!--定义父类对象-->
+var coder=new Coder("Hongbo",24);<!--定义程序员类对象-->
+
+person.Intro();<!--父类对象调用自身方法-->
+coder.Intro();<!--子类对象调用父类方法-->
+coder.Code();<!--子类对象调用自身方法-->
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

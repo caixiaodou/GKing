@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Untitled Document</title>
+		<script type=text/javascript language=JavaScript>
+function hanleMouseEvent(event)
+{
+	var div=document.getElementById("demoMouseEvent");
+	div.innerHTML="<b>当前键盘事件名称："+event.type+"</b>";
+}
+		</script>
+	</head>
+	<body>
+		<input type=text name="txtDemo" id="txtDemo" 
+		onkeydown="hanleMouseEvent(event)" 
+		onkeypress="hanleMouseEvent(event)" 
+		onkeyup="hanleMouseEvent(event)" 
+		/>
+		 <div  style="background-color:#F65327;height:20px;width:400px;"  id="demoMouseEvent"></div>
+	</body>
+</html>

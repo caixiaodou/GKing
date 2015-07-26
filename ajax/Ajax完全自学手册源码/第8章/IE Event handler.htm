@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>IE中的事件处理函数</title>
+		<script type=text/javascript language=JavaScript>
+var handler= function(){
+	alert("Click");
+}
+
+var handler1=function()
+{
+	alert("单击");
+}
+function addEvent()
+{
+	var btn=document.getElementById("btnCick");
+	btn.onclick=handler;
+	btn.attachEvent("onclick",handler1);
+}
+btn.detachEvent("onclick",handler);
+		</script>
+	</head>
+	<body>
+		<div id="btnCick"  style="cursor:hand" onmouseenter="addEvent()">点击</div>
+	</body>
+</html>
+<!--btn.attachEvent("onclick",handler);-->

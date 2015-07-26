@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>使用正则表达式扩展字符串的方法</title>
+		<script type=text/javascript language=JavaScript>
+var str="天很蓝";
+alert(str.replace("蓝","红"));
+
+var str="天很蓝";
+var reg=/蓝/;
+alert(str.replace(reg,"红"));
+
+var str="天很蓝";
+var reg=/蓝/;
+var result=str.replace(reg,function(match)
+{
+	return "红";
+}
+);
+alert(result);
+
+
+
+var skill="C#,VB.NET,JavaScript,SQL,XML";
+var arr=skill.split(",");
+
+
+var skill="C#,VB.NET,JavaScript,SQL,XML";
+var reg=/\,/;
+var arr=skill.split(reg);
+alert(arr);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
